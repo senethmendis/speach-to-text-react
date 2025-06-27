@@ -1,0 +1,64 @@
+@import "tailwindcss";
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #001219;
+  background-color: #f8f9fa;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  @apply w-screen h-screen flex items-center justify-center;
+}
+
+textarea {
+  @apply w-full h-full p-4 text-lg border border-gray-300 rounded-lg;
+}
+
+button {
+  @apply px-4 py-1 border-[3px] border-sky-500/30 bg-blue-300 text-sky-700 rounded-md hover:bg-blue-400 transition-colors;
+}
+
+.container {
+  @apply w-[500px];
+}
+
+.dot-container {
+  width: 12px;
+  height: 12px;
+}
+
+.ping {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #38bdf8; /* sky-400 */
+  opacity: 0.75;
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #0ea5e9; /* sky-500 */
+}
+
+@keyframes ping {
+  0% {
+    transform: scale(1);
+    opacity: 0.75;
+  }
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
