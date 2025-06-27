@@ -56,9 +56,9 @@ button {
     transform: scale(1);
     opacity: 0.75;
   }
-  75%, 100% {
+  75%,
+  100% {
     transform: scale(2);
     opacity: 0;
   }
 }
-

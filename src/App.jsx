@@ -1,11 +1,11 @@
-import { TextArea } from './components'
+import { TextArea } from "./components";
 
 const App = () => {
   return (
     <main>
       <TextArea />
     </main>
-  )
-}
+  );
+};
 
-export default App
+export default App;

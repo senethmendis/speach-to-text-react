@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import SpeechRecognition, {
   useSpeechRecognition,
 } from "react-speech-recognition";
 import { Button } from "../components";
-import { MicIcon, ResetIcon, StopIcon } from "../assets";
+import { MicIcon, ResetIcon } from "../assets";
 
 const TextArea = () => {
   const {
@@ -31,10 +31,11 @@ const TextArea = () => {
     setCount(characterCount);
   };
 
-  const handleRecord = () => SpeechRecognition.startListening({
+  const handleRecord = () =>
+    SpeechRecognition.startListening({
       continuous: true,
       language: "en-US",
-  })
+    });
 
   return (
     <div className="container">
@@ -65,12 +66,3 @@ const TextArea = () => {
 };
 
 export default TextArea;
-
-const AnimatePing = () => {
-  return (
-    <span className="relative flex size-3">
-      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-500 opacity-75"></span>
-      <span className="relative inline-flex size-3 rounded-full bg-red-500"></span>
-    </span>
-  );
-};
