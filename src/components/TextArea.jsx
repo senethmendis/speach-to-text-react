@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import SpeechRecognition, {
   useSpeechRecognition,
 } from "react-speech-recognition";
-import { Button } from "../components";
+import { AnimatePing, Button } from "../components";
 import { MicIcon, ResetIcon } from "../assets";
 
 const TextArea = () => {
